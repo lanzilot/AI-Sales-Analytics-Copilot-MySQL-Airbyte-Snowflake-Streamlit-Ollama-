@@ -7,13 +7,13 @@ This project enables business users to ask questions in plain English such as:
 The application automatically converts natural language into SQL, executes queries in Snowflake, and returns business-ready insights.
 
 ## Project Overview
-The goal of this project is to demonstrate a complete modern data platform architecture:
--Data Ingestion
--ELT Processing
--Data Warehousing
--Dimensional Modeling
--Data Quality Monitoring
--AI-Powered Analytics
+### The goal of this project is to demonstrate a complete modern data platform architecture:
+- Data Ingestion
+- ELT Processing
+- Data Warehousing
+- Dimensional Modeling
+- Data Quality Monitoring
+- AI-Powered Analytics
 The project uses a local Large Language Model (LLM) through Ollama to generate SQL queries from user questions without relying on paid AI APIs.
 
 ## Architecture
