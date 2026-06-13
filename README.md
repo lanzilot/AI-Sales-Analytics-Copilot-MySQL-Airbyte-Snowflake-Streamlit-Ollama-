@@ -171,3 +171,13 @@ Enable downstream transformations
 - Table Name
 Column Name
 Data Type
+
+## Technology Stack
+
+| Category | Technologies |
+|-----------|-------------|
+| Data Engineering | MySQL, Airbyte, Snowflake |
+| Data Modeling | Star Schema, Fact Tables, Dimension Tables |
+| Analytics | SQL, Streamlit |
+| AI | Ollama, Phi3 LLM |
+| Python Libraries | snowflake-connector-python, streamlit, requests, python-dotenv |
