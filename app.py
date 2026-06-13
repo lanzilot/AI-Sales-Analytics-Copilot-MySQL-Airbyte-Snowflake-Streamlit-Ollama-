@@ -18,7 +18,6 @@ load_dotenv()
 OLLAMA_URL = "http://localhost:11434/api/generate"
 OLLAMA_MODEL = "phi3"
 
-
 def get_connection():
     return snowflake.connector.connect(
         account=os.getenv("SNOWFLAKE_ACCOUNT"),
@@ -31,8 +30,7 @@ def get_connection():
         login_timeout=20,
         network_timeout=20
     )
-
-
+    
 st.write("Before Snowflake connection")
 
 def run_sql(sql):
@@ -50,7 +48,6 @@ def run_sql(sql):
     finally:
         cur.close()
         conn.close()
-
 
 def ask_ollama(prompt):
     payload = {
