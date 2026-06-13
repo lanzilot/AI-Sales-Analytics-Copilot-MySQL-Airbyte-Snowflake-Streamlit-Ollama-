@@ -94,14 +94,14 @@ Incremental Loading
 Schema Synchronization
 Automated Data Replication
 
-#Step 2 – Data Loading
+# Step 2 – Data Loading
 Data is loaded into Snowflake RAW tables.
 Purpose:
 Preserve source system data
 Maintain auditability
 Enable downstream transformations
 
-#Step 3 – Data Transformation
+# Step 3 – Data Transformation
 Snowflake transformations create a Gold Layer optimized for analytics.
 Implemented:
 -Data Cleansing
@@ -109,32 +109,29 @@ Implemented:
 -Business Rules
 -Aggregation Logic
 
-Dimensional Model
+# Dimensional Model
 Fact Table
 FACT_SALES
-
 Stores transactional sales data.
-Measures:
+-Measures:
 Quantity
 Net Amount
 VAT Amount
 Balance
-
-Attributes:
+-Attributes:
 Customer
 Item
 Invoice
 Status
-Dimension Tables
 
-DIM_CUSTOMER
+# Dimension Tables
+-DIM_CUSTOMER
 Contains:
 Customer Name
 Customer Code
 Terms
 Credit Limit
-
-DIM_ITEM
+-DIM_ITEM
 Contains:
 Item Name
 Barcode
