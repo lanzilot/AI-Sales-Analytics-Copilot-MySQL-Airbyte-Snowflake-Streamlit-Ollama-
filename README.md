@@ -1,7 +1,6 @@
 ## AI Sales Analytics Copilot
 An end-to-end Data Engineering project that combines modern data pipelines, cloud data warehousing, and local AI-powered analytics.
-
-# This project enables business users to ask questions in plain English such as:
+This project enables business users to ask questions in plain English such as:
 -Show top 10 customers by sales
 -Show top selling items
 -Show monthly revenue
