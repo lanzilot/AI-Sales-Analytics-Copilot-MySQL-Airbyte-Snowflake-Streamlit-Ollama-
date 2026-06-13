@@ -83,25 +83,25 @@ Barcode
 Packing
 
 ## Data Pipeline
-Step 1 – Data Extraction
+
+# Step 1 – Data Extraction
 Airbyte extracts data from MySQL tables:
 customer
 invoice1
 invoice2
-
 Features:
 Incremental Loading
 Schema Synchronization
 Automated Data Replication
-Step 2 – Data Loading
 
+#Step 2 – Data Loading
 Data is loaded into Snowflake RAW tables.
 Purpose:
 Preserve source system data
 Maintain auditability
 Enable downstream transformations
-Step 3 – Data Transformation
 
+#Step 3 – Data Transformation
 Snowflake transformations create a Gold Layer optimized for analytics.
 Implemented:
 -Data Cleansing
