@@ -36,28 +36,17 @@ def get_connection():
 st.write("Before Snowflake connection")
 
 def run_sql(sql):
-
     st.write("Opening connection...")
-
     conn = get_connection()
-
     st.write("Connection opened")
-
     cur = conn.cursor()
-
     try:
         st.write("Executing SQL...")
-
         cur.execute(sql)
-
         st.write("Fetching data...")
-
         df = cur.fetch_pandas_all()
-
         st.write("Data fetched")
-
         return df
-
     finally:
         cur.close()
         conn.close()
@@ -69,10 +58,8 @@ def ask_ollama(prompt):
         "prompt": prompt,
         "stream": False
     }
-
     response = requests.post(OLLAMA_URL, json=payload)
     response.raise_for_status()
-
     return response.json()["response"].strip()
 
 
@@ -141,15 +128,12 @@ FROM SALES_DW.GOLD.VW_AI_SALES_COPILOT
 GROUP BY SALES_MONTH
 ORDER BY SALES_MONTH;
 """
-
     return None
-
 
 st.set_page_config(page_title="AI Sales Copilot", layout="wide")
 
 st.title("🚀 AI Sales Data Engineering Copilot")
 st.caption("MySQL → Airbyte → Snowflake → Streamlit → Ollama")
-
 
 if st.button("Test Snowflake Connection"):
     try:
@@ -165,46 +149,34 @@ if st.button("Test Snowflake Connection"):
         st.error("Snowflake Connection Failed")
         st.exception(e)
 
-
 tab1, tab2, tab3 = st.tabs([
     "Analytics Copilot",
     "Data Quality",
     "Data Dictionary"
 ])
 
-
 with tab1:
     st.subheader("Ask your sales data")
-
     question = st.text_input("Example: Show top 10 customers by sales")
-
     if st.button("Generate and Run SQL"):
         try:
             sql = get_template(question)
-
             if sql is None:
                 sql = generate_sql(question)
-
             st.subheader("Generated SQL")
             st.code(sql, language="sql")
-
             st.info("Running SQL in Snowflake...")
-
             df = run_sql(sql)
-
             st.success("SQL executed successfully.")
             st.subheader("Result")
             st.write(f"Rows returned: {len(df)}")
             st.dataframe(df, use_container_width=True)
-
         except Exception as e:
             st.error("Execution failed.")
             st.exception(e)
-
-
+            
 with tab2:
     st.subheader("Data Quality Checks")
-
     checks = {
         "Duplicate Invoices": """
 SELECT
@@ -227,7 +199,6 @@ WHERE CUSTOMER_KEY IS NULL;
     }
 
     selected = st.selectbox("Choose check", list(checks.keys()))
-
     if st.button("Run Check"):
         try:
             df = run_sql(checks[selected])
@@ -237,10 +208,8 @@ WHERE CUSTOMER_KEY IS NULL;
             st.error("Data quality check failed.")
             st.exception(e)
 
-
 with tab3:
     st.subheader("Data Dictionary")
-
     if st.button("Load Data Dictionary"):
         try:
             sql = """
@@ -252,8 +221,8 @@ FROM SALES_DW.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_SCHEMA = 'GOLD'
 ORDER BY TABLE_NAME, ORDINAL_POSITION;
 """
-            df = run_sql(sql)
-            st.dataframe(df, use_container_width=True)
-        except Exception as e:
-            st.error("Failed to load data dictionary.")
-            st.exception(e)
+        df = run_sql(sql)
+        st.dataframe(df, use_container_width=True)
+    except Exception as e:
+        st.error("Failed to load data dictionary.")
+        st.exception(e)
