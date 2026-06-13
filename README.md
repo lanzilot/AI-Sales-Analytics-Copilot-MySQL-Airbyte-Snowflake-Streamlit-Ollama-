@@ -46,7 +46,6 @@ Ollama (Phi3 LLM)
 - Dimension Tables
 - Analytics
 - SQL
-- Streamlit
 - AI
 - Ollama
 - Phi3 LLM
