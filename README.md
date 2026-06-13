@@ -36,25 +36,13 @@ Streamlit Application
 Ollama (Phi3 LLM)
 
 ## Technology Stack
-### Data Engineering
-- MySQL
-- Airbyte
-- Snowflake
-- Data Modeling
-- Star Schema
-- Fact Tables
-- Dimension Tables
-- Analytics
-- SQL
-- AI
-- Ollama
-- Phi3 LLM
-- Python Libraries
-- snowflake-connector-python
-- streamlit
-- requests
-- python-dotenv
-- Source Data
+| Category | Technologies |
+|-----------|-------------|
+| Data Engineering | MySQL, Airbyte, Snowflake |
+| Data Modeling | Star Schema, Fact Tables, Dimension Tables |
+| Analytics | SQL, Streamlit |
+| AI | Ollama, Phi3 LLM |
+| Python Libraries | snowflake-connector-python, streamlit, requests, python-dotenv |
 
 ### The project uses sales data from:
 - Customer
@@ -172,12 +160,3 @@ Enable downstream transformations
 Column Name
 Data Type
 
-## Technology Stack
-
-| Category | Technologies |
-|-----------|-------------|
-| Data Engineering | MySQL, Airbyte, Snowflake |
-| Data Modeling | Star Schema, Fact Tables, Dimension Tables |
-| Analytics | SQL, Streamlit |
-| AI | Ollama, Phi3 LLM |
-| Python Libraries | snowflake-connector-python, streamlit, requests, python-dotenv |
