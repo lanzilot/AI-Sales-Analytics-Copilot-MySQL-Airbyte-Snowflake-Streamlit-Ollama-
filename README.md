@@ -3,7 +3,7 @@ An end-to-end Data Engineering project that combines modern data pipelines, clou
 This project enables business users to ask questions in plain English such as:
 -Show top 10 customers by sales
 -Show top selling items
--Show monthly revenue
+-Show monthly revenue.
 The application automatically converts natural language into SQL, executes queries in Snowflake, and returns business-ready insights.
 
 ## Project Overview
