@@ -20,37 +20,43 @@ The project uses a local Large Language Model (LLM) through Ollama to generate S
 ## Architecture
 MySQL
    ▼
+
 Airbyte
    ▼
+
 Snowflake RAW Layer
    ▼
+
 Snowflake GOLD Layer
    ▼
+
 Streamlit Application
    ▼
+
 Ollama (Phi3 LLM)
-Technology Stack
-Data Engineering
-MySQL
-Airbyte
-Snowflake
-Data Modeling
-Star Schema
-Fact Tables
-Dimension Tables
-Analytics
-SQL
-Streamlit
-AI
-Ollama
-Phi3 LLM
-Python Libraries
-snowflake-connector-python
-streamlit
-requests
-pandas
-python-dotenv
-Source Data
+
+## Technology Stack
+-Data Engineering
+-MySQL
+-Airbyte
+-Snowflake
+-Data Modeling
+-Star Schema
+-Fact Tables
+-Dimension Tables
+-Analytics
+-SQL
+-Streamlit
+-AI
+-Ollama
+-Phi3 LLM
+-Python Libraries
+-snowflake-connector-python
+-streamlit
+-requests
+-pandas
+-python-dotenv
+-Source Data
 
 The project uses sales data from:
 Customer
