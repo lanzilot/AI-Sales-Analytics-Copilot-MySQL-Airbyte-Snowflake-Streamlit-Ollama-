@@ -14,7 +14,7 @@ The project uses a local Large Language Model (LLM) through Ollama to generate S
 - Data Warehousing
 - Dimensional Modeling
 - Data Quality Monitoring
-- Streaming
+- Sync from mysql to snowflake using airbyte
 - AI-Powered Analytics
   
 ## Architecture
